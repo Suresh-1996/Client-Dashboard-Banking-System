@@ -3,14 +3,16 @@ import { HiArrowLeft } from "react-icons/hi";
 import { FaSortAmountDown } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("Main"); // Default active tab
+  const navigate = useNavigate();
 
   const tabs = ["Main", "Accounts", "KYC", "Notification", "Notes"];
   return (
     <div className="w-full ">
-      <div className=" my-10 mx-15 shadow-md  bg-[#fcfcfc] rounded-sm ">
+      <div className=" my-8 mx-15 pb-5 shadow-md  bg-[#fcfcfc] rounded-sm ">
         {/* bg-[#fcfcfc]  */}
         <div className="flex py-2 px-7 flex-col  gap-3">
           <div className="flex justify-between">
@@ -19,7 +21,10 @@ const Home = () => {
               <h1 className="text-3xl px-2 font-bold">John Brick</h1>
             </div>
             <div>
-              <button className="border-2 font-bold text-[10px]  rounded-md py-1 px-3 text-red-500">
+              <button
+                className="border-2 font-bold text-[10px]  rounded-md py-1 px-3 text-red-500"
+                onClick={() => navigate("/BlockClient")}
+              >
                 Block the client's profile
               </button>
               <button className="border-2 ml-1 font-bold text-[10px] rounded-md py-1 px-3 text-gray-400">

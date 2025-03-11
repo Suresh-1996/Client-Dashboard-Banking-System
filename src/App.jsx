@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./componets/Home";
+import BlockClient from "./componets/BlockClient";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/BlockClient" element={<BlockClient />} />
+      </Routes>
+    </Router>
   );
 }
 
