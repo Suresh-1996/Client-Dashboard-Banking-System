@@ -32,12 +32,12 @@ const Home = () => {
             <p className="text-[12px] font-medium  text-gray-300">John Brick</p>
           </div>
           <div className=" border-b border-gray-200">
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-5">
               {tabs.map((tab) => (
                 <li key={tab}>
                   <button
                     onClick={() => setActiveTab(tab)}
-                    className={`relative px-4 py-2 text-gray-700 font-medium text-sm transition ${
+                    className={`relative  py-2 text-gray-700 font-medium text-sm transition ${
                       activeTab === tab
                         ? "!text-blue-500"
                         : "hover:text-blue-500"
